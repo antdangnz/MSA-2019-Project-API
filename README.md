@@ -35,12 +35,10 @@ It will contain information such as class name, class number, whether it's a tes
 
 It could also contain ratings for reliability. (Rating out of 10?)
 
-
-
-
 ##### Question Collection Chosen
 I decided to use the Question Collection idea.
 
+id int [primary key]
 Class Name: VARCHAR
 Class Number: VARCHAR/TINYINT
 Institution: VARCHAR
@@ -51,3 +49,23 @@ Author: VARCHAR
 Date Created: DATE/TIMESTAMP
 Rating: TINYINT
 
+
+
+# RETRACT
+We have to make the projects they give us and add small changes
+
+
+    ```
+    id: int [primary key]
+    First Name: VARCHAR
+    Last Name: VARCHAR
+    Year/Form: VARCHAR
+    Classroom: CHAR
+    Phone Number: VARCHAR
+    Email Address: VARCHAR
+    Emergency Contact: VARCHAR
+    Emergency Contact Phone Number: VARCHAR
+    Emergency Contact Email: VARCHAR
+    DOB (Date of birth): DATE
+    Date Created: DATE
+    ```

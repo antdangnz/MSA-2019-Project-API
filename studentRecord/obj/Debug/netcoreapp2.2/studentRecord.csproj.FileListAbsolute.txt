@@ -1,0 +1,14 @@
+C:\Users\ADang\source\repos\studentRecord\studentRecord\bin\Debug\netcoreapp2.2\studentRecord.deps.json
+C:\Users\ADang\source\repos\studentRecord\studentRecord\bin\Debug\netcoreapp2.2\studentRecord.runtimeconfig.json
+C:\Users\ADang\source\repos\studentRecord\studentRecord\bin\Debug\netcoreapp2.2\studentRecord.runtimeconfig.dev.json
+C:\Users\ADang\source\repos\studentRecord\studentRecord\bin\Debug\netcoreapp2.2\studentRecord.dll
+C:\Users\ADang\source\repos\studentRecord\studentRecord\obj\Debug\netcoreapp2.2\studentRecord.csprojAssemblyReference.cache
+C:\Users\ADang\source\repos\studentRecord\studentRecord\obj\Debug\netcoreapp2.2\studentRecord.csproj.CoreCompileInputs.cache
+C:\Users\ADang\source\repos\studentRecord\studentRecord\obj\Debug\netcoreapp2.2\studentRecord.RazorAssemblyInfo.cache
+C:\Users\ADang\source\repos\studentRecord\studentRecord\obj\Debug\netcoreapp2.2\studentRecord.RazorAssemblyInfo.cs
+C:\Users\ADang\source\repos\studentRecord\studentRecord\obj\Debug\netcoreapp2.2\studentRecord.AssemblyInfoInputs.cache
+C:\Users\ADang\source\repos\studentRecord\studentRecord\obj\Debug\netcoreapp2.2\studentRecord.AssemblyInfo.cs
+C:\Users\ADang\source\repos\studentRecord\studentRecord\obj\Debug\netcoreapp2.2\studentRecord.RazorTargetAssemblyInfo.cache
+C:\Users\ADang\source\repos\studentRecord\studentRecord\bin\Debug\netcoreapp2.2\studentRecord.pdb
+C:\Users\ADang\source\repos\studentRecord\studentRecord\obj\Debug\netcoreapp2.2\studentRecord.dll
+C:\Users\ADang\source\repos\studentRecord\studentRecord\obj\Debug\netcoreapp2.2\studentRecord.pdb
