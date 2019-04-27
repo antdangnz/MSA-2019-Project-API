@@ -50,11 +50,25 @@ Date Created: DATE/TIMESTAMP
 Rating: TINYINT
 
 
+```
+CREATE TABLE [questions]
+(
+	id INT NOT NULL IDENTITY(1, 1) PRIMARY KEY
+	class_name VARCHAR(30),
+	class_number VARCHAR(30),
+	institution VARCHAR(50),
+	question_type VARCHAR(30),
+	question_text TEXT,
+	answer TEXT,
+	author VARCHAR(50),
+	date_created DATE,
+	rating TINYINT,
+);
+```
 
-# RETRACT
-We have to make the projects they give us and add small changes
 
-
+# From their README
+This is for the student api
     ```
     id: int [primary key]
     First Name: VARCHAR
