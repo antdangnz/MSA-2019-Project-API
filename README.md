@@ -13,8 +13,8 @@ Some ideas to work with:
 - Question collection (For class and for random?)
 
 
-I will be going with:
-Either
+I will be going with:  
+Either  
 - Book Database
 - Question Collection
 
@@ -35,10 +35,10 @@ It will contain information such as class name, class number, whether it's a tes
 
 It could also contain ratings for reliability. (Rating out of 10?)
 
-##### Question Collection Chosen
+## Question Collection Chosen
 I decided to use the Question Collection idea.
 
-id int [primary key]
+<!-- id int [primary key]
 Class Name: VARCHAR
 Class Number: VARCHAR/TINYINT
 Institution: VARCHAR
@@ -47,13 +47,14 @@ Question: TEXT
 Answer: TEXT
 Author: VARCHAR
 Date Created: DATE/TIMESTAMP
-Rating: TINYINT
+Rating: TINYINT -->
 
+The query string for the SQL database:
 
 ```
 CREATE TABLE [questions]
 (
-	id INT NOT NULL IDENTITY(1, 1) PRIMARY KEY
+	id INT NOT NULL IDENTITY(1, 1) PRIMARY KEY,
 	class_name VARCHAR(30),
 	class_number VARCHAR(30),
 	institution VARCHAR(50),
@@ -61,25 +62,32 @@ CREATE TABLE [questions]
 	question_text TEXT,
 	answer TEXT,
 	author VARCHAR(50),
-	date_created DATE,
 	rating TINYINT,
+	date_created DATE
 );
 ```
 
+## CRUD Actions
 
-# From their README
-This is for the student api
-    ```
-    id: int [primary key]
-    First Name: VARCHAR
-    Last Name: VARCHAR
-    Year/Form: VARCHAR
-    Classroom: CHAR
-    Phone Number: VARCHAR
-    Email Address: VARCHAR
-    Emergency Contact: VARCHAR
-    Emergency Contact Phone Number: VARCHAR
-    Emergency Contact Email: VARCHAR
-    DOB (Date of birth): DATE
-    Date Created: DATE
-    ```
+Below, are headings that explain the different CRUD actions that have/will be implemented.
+
+### Create
+
+
+
+### Read
+
+
+
+### Update
+
+
+
+### Delete
+
+
+
+## Unit Testing
+
+I will also need to add some Unit Testing to this project, just for the sake of practice. (There is no mention of having to do Unit Tests for this project in the README).
+I will need to update this section once I've implemented some unit testing.
