@@ -13050,11 +13050,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ADang\\source\\repos\\questionCollection\\questionCollection\\questionCollection.csproj",
+      "projectUniqueName": "C:\\Users\\ADang\\Desktop\\MSA 2019\\MSA-2019-Project-API\\questionCollection\\questionCollection.csproj",
       "projectName": "questionCollection",
-      "projectPath": "C:\\Users\\ADang\\source\\repos\\questionCollection\\questionCollection\\questionCollection.csproj",
+      "projectPath": "C:\\Users\\ADang\\Desktop\\MSA 2019\\MSA-2019-Project-API\\questionCollection\\questionCollection.csproj",
       "packagesPath": "C:\\Users\\ADang\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ADang\\source\\repos\\questionCollection\\questionCollection\\obj\\",
+      "outputPath": "C:\\Users\\ADang\\Desktop\\MSA 2019\\MSA-2019-Project-API\\questionCollection\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
