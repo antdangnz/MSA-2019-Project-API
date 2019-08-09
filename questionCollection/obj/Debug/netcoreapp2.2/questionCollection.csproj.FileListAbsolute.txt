@@ -12,17 +12,3 @@ C:\Users\ADang\source\repos\questionCollection\questionCollection\obj\Debug\netc
 C:\Users\ADang\source\repos\questionCollection\questionCollection\bin\Debug\netcoreapp2.2\questionCollection.pdb
 C:\Users\ADang\source\repos\questionCollection\questionCollection\obj\Debug\netcoreapp2.2\questionCollection.dll
 C:\Users\ADang\source\repos\questionCollection\questionCollection\obj\Debug\netcoreapp2.2\questionCollection.pdb
-C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollection\bin\Debug\netcoreapp2.2\questionCollection.deps.json
-C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollection\bin\Debug\netcoreapp2.2\questionCollection.runtimeconfig.json
-C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollection\bin\Debug\netcoreapp2.2\questionCollection.runtimeconfig.dev.json
-C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollection\bin\Debug\netcoreapp2.2\questionCollection.dll
-C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollection\bin\Debug\netcoreapp2.2\questionCollection.pdb
-C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollection\obj\Debug\netcoreapp2.2\questionCollection.csprojAssemblyReference.cache
-C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollection\obj\Debug\netcoreapp2.2\questionCollection.csproj.CoreCompileInputs.cache
-C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollection\obj\Debug\netcoreapp2.2\questionCollection.RazorAssemblyInfo.cache
-C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollection\obj\Debug\netcoreapp2.2\questionCollection.RazorAssemblyInfo.cs
-C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollection\obj\Debug\netcoreapp2.2\questionCollection.AssemblyInfoInputs.cache
-C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollection\obj\Debug\netcoreapp2.2\questionCollection.AssemblyInfo.cs
-C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollection\obj\Debug\netcoreapp2.2\questionCollection.RazorTargetAssemblyInfo.cache
-C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollection\obj\Debug\netcoreapp2.2\questionCollection.dll
-C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollection\obj\Debug\netcoreapp2.2\questionCollection.pdb

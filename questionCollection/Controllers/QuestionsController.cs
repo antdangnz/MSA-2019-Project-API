@@ -13,9 +13,9 @@ namespace questionCollection.Controllers
     [ApiController]
     public class QuestionsController : ControllerBase
     {
-        private readonly questionCollectionDB _context;
+        private readonly questionCollectionContext _context;
 
-        public QuestionsController(questionCollectionDB context)
+        public QuestionsController(questionCollectionContext context)
         {
             _context = context;
         }
