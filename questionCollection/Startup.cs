@@ -37,7 +37,16 @@ namespace questionCollection
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "TITLE", Version = "v1" });
+                c.SwaggerDoc("v1", new Info { Title = "Question Collection API",
+                    Version = "v1",
+                    Description = "Legend has it, this guy is still writing up the description of this API",
+                    Contact = new Contact
+                    {
+                        Name = "Anthony Dang",
+                        Email = "anthony.dang.nz@gmail.com",
+                        Url = "https//github.com/antdangnz"
+                    }
+                });
             });
         }
 
