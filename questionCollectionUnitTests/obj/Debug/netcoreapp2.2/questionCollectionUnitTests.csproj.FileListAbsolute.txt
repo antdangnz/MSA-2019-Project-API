@@ -1,0 +1,14 @@
+C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollectionUnitTests\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollectionUnitTests\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollectionUnitTests\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollectionUnitTests\bin\Debug\netcoreapp2.2\questionCollectionUnitTests.deps.json
+C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollectionUnitTests\bin\Debug\netcoreapp2.2\questionCollectionUnitTests.runtimeconfig.json
+C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollectionUnitTests\bin\Debug\netcoreapp2.2\questionCollectionUnitTests.runtimeconfig.dev.json
+C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollectionUnitTests\bin\Debug\netcoreapp2.2\questionCollectionUnitTests.dll
+C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollectionUnitTests\bin\Debug\netcoreapp2.2\questionCollection.dll
+C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollectionUnitTests\bin\Debug\netcoreapp2.2\questionCollection.pdb
+C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollectionUnitTests\obj\Debug\netcoreapp2.2\questionCollectionUnitTests.csprojAssemblyReference.cache
+C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollectionUnitTests\obj\Debug\netcoreapp2.2\questionCollectionUnitTests.csproj.CoreCompileInputs.cache
+C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollectionUnitTests\obj\Debug\netcoreapp2.2\questionCollectionUnitTests.AssemblyInfoInputs.cache
+C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollectionUnitTests\obj\Debug\netcoreapp2.2\questionCollectionUnitTests.AssemblyInfo.cs
+C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollectionUnitTests\obj\Debug\netcoreapp2.2\questionCollectionUnitTests.csproj.CopyComplete
