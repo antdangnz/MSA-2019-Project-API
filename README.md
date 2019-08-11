@@ -54,24 +54,32 @@ The query string for the SQL database:
 ```
 CREATE TABLE [questions]
 (
-	id INT NOT NULL IDENTITY(1, 1) PRIMARY KEY,
+	questionId INT NOT NULL IDENTITY(1, 1) PRIMARY KEY,
 	class_name VARCHAR(30),
 	class_number VARCHAR(30),
-	institution VARCHAR(50),
 	question_type VARCHAR(30),
 	question_text TEXT,
 	answer TEXT,
-	author VARCHAR(50),
-	rating TINYINT,
 	date_created DATE
 );
 ```
+	authorId INT NOT NULL IDENTITY(1, 1) PRIMARY KEY,
+	questionId (Foreign Key)
+	author VARCHAR(50),
+	class_name VARCHAR(30),
+	class_number VARCHAR(30),
+	institution VARCHAR(50),
+	
+	ratingId
+	questionId
+	rating TINYINT,
 
 ## CRUD Actions
 
 Below, are headings that explain the different CRUD actions that have/will be implemented.
 
 ### Create
+
 
 
 
