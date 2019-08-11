@@ -78,7 +78,7 @@ namespace questionCollectionUnitTests
                 questions1.Phrase = newPhrase;
 
                 QuestionsController questionsController = new QuestionsController(context);
-                IActionResult result = await questionsController.PutQuestions(questions1.QuestionsId, transcription1) as IActionResult;
+                IActionResult result = await questionsController.PutQuestions(questions1.QuestionId, questions1) as IActionResult;
 
                 Assert.IsNotNull(result);
                 Assert.IsInstanceOfType(result, typeof(NoContentResult));
