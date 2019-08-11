@@ -15,7 +15,9 @@ namespace questionCollection.Model
         {
         }
 
+        public virtual DbSet<Authors> Authors { get; set; }
         public virtual DbSet<Questions> Questions { get; set; }
+        public virtual DbSet<Ratings> Ratings { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -30,8 +32,11 @@ namespace questionCollection.Model
         {
             modelBuilder.HasAnnotation("ProductVersion", "2.2.6-servicing-10079");
 
-            modelBuilder.Entity<Questions>(entity =>
+            modelBuilder.Entity<Authors>(entity =>
             {
+                entity.HasKey(e => e.AuthorId)
+                    .HasName("PK__Authors__8E2731B93B75D152");
+
                 entity.Property(e => e.Author).IsUnicode(false);
 
                 entity.Property(e => e.ClassName).IsUnicode(false);
@@ -40,7 +45,35 @@ namespace questionCollection.Model
 
                 entity.Property(e => e.Institution).IsUnicode(false);
 
+                entity.HasOne(d => d.Question)
+                    .WithMany(p => p.Authors)
+                    .HasForeignKey(d => d.QuestionId)
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .HasConstraintName("questionId");
+            });
+
+            modelBuilder.Entity<Questions>(entity =>
+            {
+                entity.HasKey(e => e.QuestionId)
+                    .HasName("PK__Question__6238D4B2ED6C9FA6");
+
+                entity.Property(e => e.ClassName).IsUnicode(false);
+
+                entity.Property(e => e.ClassNumber).IsUnicode(false);
+
                 entity.Property(e => e.QuestionType).IsUnicode(false);
+            });
+
+            modelBuilder.Entity<Ratings>(entity =>
+            {
+                entity.HasKey(e => e.RatingId)
+                    .HasName("PK__Ratings__2D290CA9234C592C");
+
+                entity.HasOne(d => d.Question)
+                    .WithMany(p => p.Ratings)
+                    .HasForeignKey(d => d.QuestionId)
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .HasConstraintName("ratings_questionId");
             });
         }
     }

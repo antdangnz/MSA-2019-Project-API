@@ -52,7 +52,7 @@ Rating: TINYINT -->
 The query string for the SQL database:
 
 ```
-CREATE TABLE [questions]
+CREATE TABLE [Questions]
 (
 	questionId INT NOT NULL IDENTITY(1, 1) PRIMARY KEY,
 	class_name VARCHAR(30),
@@ -63,16 +63,29 @@ CREATE TABLE [questions]
 	date_created DATE
 );
 ```
+
+CREATE TABLE [Authors]
+(
 	authorId INT NOT NULL IDENTITY(1, 1) PRIMARY KEY,
-	questionId (Foreign Key)
+	questionId INT,
 	author VARCHAR(50),
 	class_name VARCHAR(30),
 	class_number VARCHAR(30),
-	institution VARCHAR(50),
+	institution VARCHAR(50)
 	
-	ratingId
-	questionId
+	CONSTRAINT [questionId] FOREIGN KEY (questionId) REFERENCES [dbo].[Questions] (questionId) ON DELETE CASCADE
+);
+	
+CREATE TABLE [Ratings]
+(
+	ratingId INT NOT NULL IDENTITY(1, 1) PRIMARY KEY,
+	questionId INT,
 	rating TINYINT,
+	rating_description TEXT,
+	date_created DATE
+	
+	CONSTRAINT [questionId] FOREIGN KEY (questionId) REFERENCES [dbo].[Questions] (questionId) ON DELETE CASCADE
+);
 
 ## CRUD Actions
 

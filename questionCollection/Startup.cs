@@ -10,8 +10,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-
-using Microsoft.EntityFrameworkCore;
 using questionCollection.Model;
 using Swashbuckle.AspNetCore.Swagger;
 
@@ -31,23 +29,24 @@ namespace questionCollection
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            var connection = Configuration.GetConnectionString("QuestionCollectionContext");
-            services.AddDbContext<questionCollectionContext>(options => options.UseSqlServer(connection));
-
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "Question Collection API",
+                c.SwaggerDoc("v1", new Info
+                {
+                    Title = "Questions Collection API",
                     Version = "v1",
-                    Description = "Legend has it, this guy is still writing up the description of this API",
+                    Description = "A web API providing a service for storing and reading example questions for classes.",
                     Contact = new Contact
                     {
                         Name = "Anthony Dang",
                         Email = "anthony.dang.nz@gmail.com",
-                        Url = "https//github.com/antdangnz"
-                    }
+                        Url = "https://github.com/antdangnz"
+                    },
                 });
             });
+            services.AddDbContext<questionCollectionContext>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -60,7 +59,7 @@ namespace questionCollection
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My first API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "ScribrAPI V1");
                 c.RoutePrefix = string.Empty; // launch swagger from root
             });
 

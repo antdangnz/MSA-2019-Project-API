@@ -45,7 +45,7 @@ namespace questionCollection.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutQuestions(int id, Questions questions)
         {
-            if (id != questions.Id)
+            if (id != questions.QuestionId)
             {
                 return BadRequest();
             }
@@ -78,7 +78,7 @@ namespace questionCollection.Controllers
             _context.Questions.Add(questions);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetQuestions", new { id = questions.Id }, questions);
+            return CreatedAtAction("GetQuestions", new { id = questions.QuestionId }, questions);
         }
 
         // DELETE: api/Questions/5
@@ -99,7 +99,7 @@ namespace questionCollection.Controllers
 
         private bool QuestionsExists(int id)
         {
-            return _context.Questions.Any(e => e.Id == id);
+            return _context.Questions.Any(e => e.QuestionId == id);
         }
     }
 }
