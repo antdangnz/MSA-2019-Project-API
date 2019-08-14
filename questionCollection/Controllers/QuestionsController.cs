@@ -168,9 +168,9 @@ namespace QuestionCollection.Controllers
 
             // Currently not working atm.
         // PUT: api/Questions/5
-        [HttpPut("addrating/{id}")]
-        public async Task<IActionResult> AddRatingToQuestion(int id, [FromBody] Ratings ratings)
-        {
+        //[HttpPut("addrating/{id}")]
+        //public async Task<IActionResult> AddRatingToQuestion(int id, [FromBody] Ratings ratings)
+        //{
             //if (id != questions.QuestionId)
             //{
             //    return BadRequest();
@@ -193,13 +193,13 @@ namespace QuestionCollection.Controllers
             //        throw;
             //    }
             //}
-            Ratings rating = new Ratings();
-            rating = ratings;
+        //    Ratings rating = new Ratings();
+        //    rating = ratings;
 
-            System.Diagnostics.Debug.WriteLine(rating);
+        //    System.Diagnostics.Debug.WriteLine(rating);
 
-            return NoContent();
-        }
+        //    return NoContent();
+        //}
 
 
 
