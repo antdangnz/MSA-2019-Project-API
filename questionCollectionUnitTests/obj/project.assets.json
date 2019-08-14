@@ -5294,6 +5294,7 @@
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
           "Microsoft.AspNetCore.App": "2.2.0",
+          "Microsoft.AspNetCore.SignalR": "1.1.0",
           "Microsoft.EntityFrameworkCore": "2.2.6",
           "Microsoft.EntityFrameworkCore.InMemory": "2.2.6",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.3",
@@ -14538,6 +14539,7 @@
       "MSTest.TestAdapter >= 1.4.0",
       "MSTest.TestFramework >= 1.4.0",
       "Microsoft.EntityFrameworkCore >= 2.2.6",
+      "Microsoft.EntityFrameworkCore.InMemory >= 2.2.6",
       "Microsoft.NET.Test.Sdk >= 16.0.1",
       "Microsoft.NETCore.App >= 2.2.0",
       "QuestionCollection >= 1.0.0"
@@ -14597,6 +14599,10 @@
             "version": "[1.4.0, )"
           },
           "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[2.2.6, )"
+          },
+          "Microsoft.EntityFrameworkCore.InMemory": {
             "target": "Package",
             "version": "[2.2.6, )"
           },

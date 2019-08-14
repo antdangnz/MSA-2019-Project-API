@@ -60,22 +60,22 @@ namespace QuestionCollectionUnitTests
         }
 
         // unfortunately, it can be hard to avoid test method names that are also descriptive
-        [TestMethod]
-        public async Task TestPutTranscriptionNoContentStatusCode()
-        {
-            using (var context = new questionCollectionContext(options))
-            {
-                string newPhrase = "this is now a different phrase";
-                Ratings ratings1 = context.Questions.Where(x => x.Phrase == ratings[0].Phrase).Single();
-                ratings1.Phrase = newPhrase;
+        //[TestMethod]
+        //public async Task TestPutTranscriptionNoContentStatusCode()
+        //{
+        //    using (var context = new questionCollectionContext(options))
+        //    {
+        //        string newPhrase = "this is now a different phrase";
+        //        Ratings ratings1 = context.Questions.Where(x => x.Phrase == ratings[0].Phrase).Single();
+        //        ratings1.Phrase = newPhrase;
 
-                RatingsController ratingsController = new RatingsController(context);
-                IActionResult result = await ratingsController.PutRatings(ratings1.RatingId, ratings1) as IActionResult;
+        //        RatingsController ratingsController = new RatingsController(context);
+        //        IActionResult result = await ratingsController.PutRatings(ratings1.RatingId, ratings1) as IActionResult;
 
-                Assert.IsNotNull(result);
-                Assert.IsInstanceOfType(result, typeof(NoContentResult));
-            }
-        }
+        //        Assert.IsNotNull(result);
+        //        Assert.IsInstanceOfType(result, typeof(NoContentResult));
+        //    }
+        //}
 
     }
 }
