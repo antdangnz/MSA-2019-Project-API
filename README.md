@@ -57,6 +57,8 @@ CREATE TABLE [Questions]
 	questionId INT NOT NULL IDENTITY(1, 1) PRIMARY KEY,
 	class_name VARCHAR(30),
 	class_number VARCHAR(30),
+	author VARCHAR(50),
+	institution VARCHAR(50),
 	question_type VARCHAR(30),
 	question_text TEXT,
 	answer TEXT,
@@ -64,18 +66,6 @@ CREATE TABLE [Questions]
 );
 ```
 
-CREATE TABLE [Authors]
-(
-	authorId INT NOT NULL IDENTITY(1, 1) PRIMARY KEY,
-	questionId INT,
-	author VARCHAR(50),
-	class_name VARCHAR(30),
-	class_number VARCHAR(30),
-	institution VARCHAR(50)
-	
-	CONSTRAINT [questionId] FOREIGN KEY (questionId) REFERENCES [dbo].[Questions] (questionId) ON DELETE CASCADE
-);
-	
 CREATE TABLE [Ratings]
 (
 	ratingId INT NOT NULL IDENTITY(1, 1) PRIMARY KEY,
@@ -94,6 +84,17 @@ Below, are headings that explain the different CRUD actions that have/will be im
 ### Create
 
 
+CREATE TABLE [Authors] // NOT DOING THIS
+(
+	authorId INT NOT NULL IDENTITY(1, 1) PRIMARY KEY,
+	questionId INT,
+	author VARCHAR(50),
+	class_name VARCHAR(30),
+	class_number VARCHAR(30),
+	institution VARCHAR(50)
+	
+	CONSTRAINT [questionId] FOREIGN KEY (questionId) REFERENCES [dbo].[Questions] (questionId) ON DELETE CASCADE
+);
 
 
 ### Read

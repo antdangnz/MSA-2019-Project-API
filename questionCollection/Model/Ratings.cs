@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace questionCollection.Model
+namespace QuestionCollection.Model
 {
     public partial class Ratings
     {

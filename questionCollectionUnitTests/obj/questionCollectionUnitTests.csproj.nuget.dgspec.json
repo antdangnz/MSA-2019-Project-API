@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ADang\\Desktop\\MSA 2019\\MSA-2019-Project-API\\questionCollectionUnitTests\\questionCollectionUnitTests.csproj": {}
+    "C:\\Users\\ADang\\Desktop\\MSA 2019\\MSA-2019-Project-API\\QuestionCollectionUnitTests\\QuestionCollectionUnitTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ADang\\Desktop\\MSA 2019\\MSA-2019-Project-API\\questionCollectionUnitTests\\questionCollectionUnitTests.csproj": {
+    "C:\\Users\\ADang\\Desktop\\MSA 2019\\MSA-2019-Project-API\\QuestionCollectionUnitTests\\QuestionCollectionUnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADang\\Desktop\\MSA 2019\\MSA-2019-Project-API\\questionCollectionUnitTests\\questionCollectionUnitTests.csproj",
-        "projectName": "questionCollectionUnitTests",
-        "projectPath": "C:\\Users\\ADang\\Desktop\\MSA 2019\\MSA-2019-Project-API\\questionCollectionUnitTests\\questionCollectionUnitTests.csproj",
+        "projectUniqueName": "C:\\Users\\ADang\\Desktop\\MSA 2019\\MSA-2019-Project-API\\QuestionCollectionUnitTests\\QuestionCollectionUnitTests.csproj",
+        "projectName": "QuestionCollectionUnitTests",
+        "projectPath": "C:\\Users\\ADang\\Desktop\\MSA 2019\\MSA-2019-Project-API\\QuestionCollectionUnitTests\\QuestionCollectionUnitTests.csproj",
         "packagesPath": "C:\\Users\\ADang\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADang\\Desktop\\MSA 2019\\MSA-2019-Project-API\\questionCollectionUnitTests\\obj\\",
+        "outputPath": "C:\\Users\\ADang\\Desktop\\MSA 2019\\MSA-2019-Project-API\\QuestionCollectionUnitTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -30,8 +30,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Users\\ADang\\Desktop\\MSA 2019\\MSA-2019-Project-API\\questionCollection\\questionCollection.csproj": {
-                "projectPath": "C:\\Users\\ADang\\Desktop\\MSA 2019\\MSA-2019-Project-API\\questionCollection\\questionCollection.csproj"
+              "C:\\Users\\ADang\\Desktop\\MSA 2019\\MSA-2019-Project-API\\QuestionCollection\\QuestionCollection.csproj": {
+                "projectPath": "C:\\Users\\ADang\\Desktop\\MSA 2019\\MSA-2019-Project-API\\QuestionCollection\\QuestionCollection.csproj"
               }
             }
           }
@@ -57,10 +57,6 @@
               "target": "Package",
               "version": "[2.2.6, )"
             },
-            "Microsoft.EntityFrameworkCore.InMemory": {
-              "target": "Package",
-              "version": "[2.2.6, )"
-            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.0.1, )"
@@ -80,14 +76,14 @@
         }
       }
     },
-    "C:\\Users\\ADang\\Desktop\\MSA 2019\\MSA-2019-Project-API\\questionCollection\\questionCollection.csproj": {
+    "C:\\Users\\ADang\\Desktop\\MSA 2019\\MSA-2019-Project-API\\QuestionCollection\\QuestionCollection.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADang\\Desktop\\MSA 2019\\MSA-2019-Project-API\\questionCollection\\questionCollection.csproj",
-        "projectName": "questionCollection",
-        "projectPath": "C:\\Users\\ADang\\Desktop\\MSA 2019\\MSA-2019-Project-API\\questionCollection\\questionCollection.csproj",
+        "projectUniqueName": "C:\\Users\\ADang\\Desktop\\MSA 2019\\MSA-2019-Project-API\\QuestionCollection\\QuestionCollection.csproj",
+        "projectName": "QuestionCollection",
+        "projectPath": "C:\\Users\\ADang\\Desktop\\MSA 2019\\MSA-2019-Project-API\\QuestionCollection\\QuestionCollection.csproj",
         "packagesPath": "C:\\Users\\ADang\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADang\\Desktop\\MSA 2019\\MSA-2019-Project-API\\questionCollection\\obj\\",
+        "outputPath": "C:\\Users\\ADang\\Desktop\\MSA 2019\\MSA-2019-Project-API\\QuestionCollection\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -130,15 +126,7 @@
               "target": "Package",
               "version": "[2.2.6, )"
             },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "target": "Package",
-              "version": "[2.2.6, )"
-            },
             "Microsoft.EntityFrameworkCore.InMemory": {
-              "target": "Package",
-              "version": "[2.2.6, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[2.2.6, )"
             },

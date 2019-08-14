@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace questionCollection.Model
+namespace QuestionCollection.Model
 {
     public partial class Questions
     {
         public Questions()
         {
-            Authors = new HashSet<Authors>();
             Ratings = new HashSet<Ratings>();
         }
 
@@ -21,6 +20,12 @@ namespace questionCollection.Model
         [Column("class_number")]
         [StringLength(30)]
         public string ClassNumber { get; set; }
+        [Column("author")]
+        [StringLength(50)]
+        public string Author { get; set; }
+        [Column("institution")]
+        [StringLength(50)]
+        public string Institution { get; set; }
         [Column("question_type")]
         [StringLength(30)]
         public string QuestionType { get; set; }
@@ -31,8 +36,6 @@ namespace questionCollection.Model
         [Column("date_created", TypeName = "date")]
         public DateTime? DateCreated { get; set; }
 
-        [InverseProperty("Question")]
-        public virtual ICollection<Authors> Authors { get; set; }
         [InverseProperty("Question")]
         public virtual ICollection<Ratings> Ratings { get; set; }
     }

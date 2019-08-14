@@ -5,12 +5,11 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Extensions.Configuration;
 using System.Threading.Tasks;
-using questionCollection.Controllers;
-using questionCollection.Model;
+using QuestionCollection.Controllers;
+using QuestionCollection.Model;
 
-namespace questionCollectionUnitTests
+namespace QuestionCollectionUnitTests
 {
-    [TestClass]
     class RatingsControllerUnitTests
     {
         public static readonly DbContextOptions<questionCollectionContext> options

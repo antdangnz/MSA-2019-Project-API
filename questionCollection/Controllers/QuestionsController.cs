@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using questionCollection.Model;
+using QuestionCollection.Model;
 
-namespace questionCollection.Controllers
+namespace QuestionCollection.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

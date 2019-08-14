@@ -1,27 +1,28 @@
-C:\Users\ADang\source\repos\questionCollection\questionCollection\bin\Debug\netcoreapp2.2\questionCollection.deps.json
-C:\Users\ADang\source\repos\questionCollection\questionCollection\bin\Debug\netcoreapp2.2\questionCollection.runtimeconfig.json
-C:\Users\ADang\source\repos\questionCollection\questionCollection\bin\Debug\netcoreapp2.2\questionCollection.runtimeconfig.dev.json
-C:\Users\ADang\source\repos\questionCollection\questionCollection\bin\Debug\netcoreapp2.2\questionCollection.dll
-C:\Users\ADang\source\repos\questionCollection\questionCollection\obj\Debug\netcoreapp2.2\questionCollection.csprojAssemblyReference.cache
-C:\Users\ADang\source\repos\questionCollection\questionCollection\obj\Debug\netcoreapp2.2\questionCollection.csproj.CoreCompileInputs.cache
-C:\Users\ADang\source\repos\questionCollection\questionCollection\obj\Debug\netcoreapp2.2\questionCollection.RazorAssemblyInfo.cache
-C:\Users\ADang\source\repos\questionCollection\questionCollection\obj\Debug\netcoreapp2.2\questionCollection.RazorAssemblyInfo.cs
-C:\Users\ADang\source\repos\questionCollection\questionCollection\obj\Debug\netcoreapp2.2\questionCollection.AssemblyInfoInputs.cache
-C:\Users\ADang\source\repos\questionCollection\questionCollection\obj\Debug\netcoreapp2.2\questionCollection.AssemblyInfo.cs
-C:\Users\ADang\source\repos\questionCollection\questionCollection\obj\Debug\netcoreapp2.2\questionCollection.RazorTargetAssemblyInfo.cache
-C:\Users\ADang\source\repos\questionCollection\questionCollection\bin\Debug\netcoreapp2.2\questionCollection.pdb
-C:\Users\ADang\source\repos\questionCollection\questionCollection\obj\Debug\netcoreapp2.2\questionCollection.dll
-C:\Users\ADang\source\repos\questionCollection\questionCollection\obj\Debug\netcoreapp2.2\questionCollection.pdb
-C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollection\bin\Debug\netcoreapp2.2\questionCollection.deps.json
-C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollection\bin\Debug\netcoreapp2.2\questionCollection.runtimeconfig.json
-C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollection\bin\Debug\netcoreapp2.2\questionCollection.runtimeconfig.dev.json
-C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollection\bin\Debug\netcoreapp2.2\questionCollection.dll
-C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollection\bin\Debug\netcoreapp2.2\questionCollection.pdb
-C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollection\obj\Debug\netcoreapp2.2\questionCollection.csproj.CoreCompileInputs.cache
-C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollection\obj\Debug\netcoreapp2.2\questionCollection.RazorAssemblyInfo.cache
-C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollection\obj\Debug\netcoreapp2.2\questionCollection.RazorAssemblyInfo.cs
-C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollection\obj\Debug\netcoreapp2.2\questionCollection.AssemblyInfoInputs.cache
-C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollection\obj\Debug\netcoreapp2.2\questionCollection.AssemblyInfo.cs
-C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollection\obj\Debug\netcoreapp2.2\questionCollection.RazorTargetAssemblyInfo.cache
-C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollection\obj\Debug\netcoreapp2.2\questionCollection.dll
-C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\questionCollection\obj\Debug\netcoreapp2.2\questionCollection.pdb
+C:\Users\ADang\source\repos\QuestionCollection\QuestionCollection\bin\Debug\netcoreapp2.2\QuestionCollection.deps.json
+C:\Users\ADang\source\repos\QuestionCollection\QuestionCollection\bin\Debug\netcoreapp2.2\QuestionCollection.runtimeconfig.json
+C:\Users\ADang\source\repos\QuestionCollection\QuestionCollection\bin\Debug\netcoreapp2.2\QuestionCollection.runtimeconfig.dev.json
+C:\Users\ADang\source\repos\QuestionCollection\QuestionCollection\bin\Debug\netcoreapp2.2\QuestionCollection.dll
+C:\Users\ADang\source\repos\QuestionCollection\QuestionCollection\bin\Debug\netcoreapp2.2\QuestionCollection.pdb
+C:\Users\ADang\source\repos\QuestionCollection\QuestionCollection\obj\Debug\netcoreapp2.2\QuestionCollection.csprojAssemblyReference.cache
+C:\Users\ADang\source\repos\QuestionCollection\QuestionCollection\obj\Debug\netcoreapp2.2\QuestionCollection.csproj.CoreCompileInputs.cache
+C:\Users\ADang\source\repos\QuestionCollection\QuestionCollection\obj\Debug\netcoreapp2.2\QuestionCollection.RazorAssemblyInfo.cache
+C:\Users\ADang\source\repos\QuestionCollection\QuestionCollection\obj\Debug\netcoreapp2.2\QuestionCollection.RazorAssemblyInfo.cs
+C:\Users\ADang\source\repos\QuestionCollection\QuestionCollection\obj\Debug\netcoreapp2.2\QuestionCollection.AssemblyInfoInputs.cache
+C:\Users\ADang\source\repos\QuestionCollection\QuestionCollection\obj\Debug\netcoreapp2.2\QuestionCollection.AssemblyInfo.cs
+C:\Users\ADang\source\repos\QuestionCollection\QuestionCollection\obj\Debug\netcoreapp2.2\QuestionCollection.RazorTargetAssemblyInfo.cache
+C:\Users\ADang\source\repos\QuestionCollection\QuestionCollection\obj\Debug\netcoreapp2.2\QuestionCollection.dll
+C:\Users\ADang\source\repos\QuestionCollection\QuestionCollection\obj\Debug\netcoreapp2.2\QuestionCollection.pdb
+C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\QuestionCollection\bin\Debug\netcoreapp2.2\QuestionCollection.deps.json
+C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\QuestionCollection\bin\Debug\netcoreapp2.2\QuestionCollection.runtimeconfig.json
+C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\QuestionCollection\bin\Debug\netcoreapp2.2\QuestionCollection.runtimeconfig.dev.json
+C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\QuestionCollection\bin\Debug\netcoreapp2.2\QuestionCollection.dll
+C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\QuestionCollection\bin\Debug\netcoreapp2.2\QuestionCollection.pdb
+C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\QuestionCollection\obj\Debug\netcoreapp2.2\QuestionCollection.csprojAssemblyReference.cache
+C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\QuestionCollection\obj\Debug\netcoreapp2.2\QuestionCollection.csproj.CoreCompileInputs.cache
+C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\QuestionCollection\obj\Debug\netcoreapp2.2\QuestionCollection.RazorAssemblyInfo.cache
+C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\QuestionCollection\obj\Debug\netcoreapp2.2\QuestionCollection.RazorAssemblyInfo.cs
+C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\QuestionCollection\obj\Debug\netcoreapp2.2\QuestionCollection.AssemblyInfoInputs.cache
+C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\QuestionCollection\obj\Debug\netcoreapp2.2\QuestionCollection.AssemblyInfo.cs
+C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\QuestionCollection\obj\Debug\netcoreapp2.2\QuestionCollection.RazorTargetAssemblyInfo.cache
+C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\QuestionCollection\obj\Debug\netcoreapp2.2\QuestionCollection.dll
+C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\QuestionCollection\obj\Debug\netcoreapp2.2\QuestionCollection.pdb

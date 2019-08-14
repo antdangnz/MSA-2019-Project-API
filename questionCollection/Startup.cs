@@ -10,10 +10,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using questionCollection.Model;
+using QuestionCollection.Model;
 using Swashbuckle.AspNetCore.Swagger;
 
-namespace questionCollection
+namespace QuestionCollection
 {
     public class Startup
     {
@@ -28,15 +28,16 @@ namespace questionCollection
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddDbContext<questionCollectionContext>();
 
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info
                 {
-                    Title = "Questions Collection API",
+                    Title = "QuestionCollection API",
                     Version = "v1",
-                    Description = "A web API providing a service for storing and reading example questions for classes.",
+                    Description = "A web API providing a toolkit to store exam questions",
                     Contact = new Contact
                     {
                         Name = "Anthony Dang",
@@ -45,8 +46,6 @@ namespace questionCollection
                     },
                 });
             });
-            services.AddDbContext<questionCollectionContext>();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
