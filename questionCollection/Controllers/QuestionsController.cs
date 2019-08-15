@@ -102,7 +102,7 @@ namespace QuestionCollection.Controllers
          Search Section
              */
 
-        // GET: api/Questions/
+        // GET: api/author/Anthony
         [HttpGet("author/{author}")]
         public async Task<ActionResult<IEnumerable<Questions>>> GetQuestionsByAuthor(string author)
         {
@@ -118,7 +118,7 @@ namespace QuestionCollection.Controllers
             return questions;
         }
 
-        // GET: api/Questions/5
+        // GET: api/institution/UOA
         [HttpGet("institution/{insti}")]
         public async Task<ActionResult<IEnumerable<Questions>>> GetQuestionsInstitution(string insti)
         {
@@ -133,7 +133,7 @@ namespace QuestionCollection.Controllers
             return questions;
         }
 
-        // GET: api/Questions/5
+        // GET: api/type/Exam
         [HttpGet("type/{questiontype}")]
         public async Task<ActionResult<IEnumerable<Questions>>> GetQuestionsByType(string questiontype)
         {
@@ -147,7 +147,7 @@ namespace QuestionCollection.Controllers
             return questions;
         }
 
-        // GET: api/Questions/5
+        // GET: api/class/COMPSYS
         [HttpGet("class/{classname}")]
         public async Task<ActionResult<IEnumerable<Questions>>> GetQuestionsByClass(string classname)
         {
@@ -165,38 +165,153 @@ namespace QuestionCollection.Controllers
         /*
          Ratings Section
              */
+            
+        [HttpGet("RatingValue/{id}")]
+        public async Task<ActionResult<int>> GetRatingValue(int id)
+        {
+            //var questions = await _context.Questions.Where(q => q.ClassName == classname).ToListAsync();
+            questionCollectionContext tempContext = new questionCollectionContext();
+            RatingsController ratingsController = new RatingsController(tempContext);
 
-            // Currently not working atm.
-        // PUT: api/Questions/5
+            var questionRating = await ratingsController.GetRatingsByQuestion(id);
+            var questionRatingValue = questionRating.Value.Rating;
+
+            if (questionRatingValue == null)
+            {
+                return NotFound();
+            }
+
+            return questionRatingValue;
+        }
+
+        [HttpGet("Rating/{id}")]
+        public async Task<ActionResult<Ratings>> GetRatingForQuestion(int id)
+        {
+            //var questions = await _context.Questions.Where(q => q.ClassName == classname).ToListAsync();
+            questionCollectionContext tempContext = new questionCollectionContext();
+            RatingsController ratingsController = new RatingsController(tempContext);
+
+            var questionRating = await ratingsController.GetRatingsByQuestion(id);
+
+            if (questionRating == null)
+            {
+                return NotFound();
+            }
+
+            return questionRating;
+        }
+
+
+        [HttpPut("ChangeRating/{id}")]
+        public async Task<IActionResult> PutChangeQuestionRatings(int id, Ratings ratings)
+        {
+            questionCollectionContext tempContext = new questionCollectionContext();
+            RatingsController ratingsController = new RatingsController(tempContext);
+
+            var originalRating = await ratingsController.GetRatingsByQuestion(id);
+            var originalRatingId = originalRating.Value.RatingId;
+            //Ratings newRatings = new Ratings()
+            //{
+            //    RatingId = originalRatingId,
+            //    QuestionId = ratings.QuestionId,
+            //    Rating = ratings.Rating,
+            //    RatingDescription = ratings.RatingDescription,
+            //    DateCreated = originalRating.Value.DateCreated,
+            //    Question = question.Value
+            //};
+
+            Ratings newRatings = originalRating.Value;
+
+            //newRatings.RatingId = originalRatingId;
+            //newRatings.QuestionId = id;
+            newRatings.Rating = ratings.Rating;
+            newRatings.RatingDescription = ratings.RatingDescription;
+            //newRatings.DateCreated = originalRating.Value.DateCreated;
+
+
+            await ratingsController.PutRatings(originalRatingId, newRatings);
+
+            //_context.Entry(/*question*/).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!QuestionsExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+        }
+
+
+
+        // Currently not working atm. Can't seem to add any ratings to any question
+        //PUT: api/Questions/5
         //[HttpPut("addrating/{id}")]
         //public async Task<IActionResult> AddRatingToQuestion(int id, [FromBody] Ratings ratings)
         //{
-            //if (id != questions.QuestionId)
-            //{
-            //    return BadRequest();
-            //}
+        //    questionCollectionContext tempContext = new questionCollectionContext();
+        //    RatingsController ratingsController = new RatingsController(tempContext);
 
-            //_context.Entry(questions).State = EntityState.Modified;
+        //    //Task addRating = Task.Run(async () =>
+        //    //{
 
-            //try
-            //{
-            //    await _context.SaveChangesAsync();
-            //}
-            //catch (DbUpdateConcurrencyException)
-            //{
-            //    if (!QuestionsExists(id))
-            //    {
-            //        return NotFound();
-            //    }
-            //    else
-            //    {
-            //        throw;
-            //    }
-            //}
-        //    Ratings rating = new Ratings();
-        //    rating = ratings;
+        //    var yeet = await this.GetQuestions(id);
+        //    //if (questions == null)
+        //    //{
+        //    //return NotFound();
+        //    //}
+        //    Ratings newRating = new Ratings()
+        //    {
+        //        RatingId = ratings.RatingId,
+        //        QuestionId = ratings.QuestionId,
+        //        Rating = ratings.Rating,
+        //        RatingDescription = ratings.RatingDescription,
+        //        DateCreated = ratings.DateCreated,
+        //        Question = yeet.Value
+        //    };
+        //    System.Diagnostics.Debug.WriteLine("yeeeeeeeeeeeeeeeeeeeeeet");
+        //    System.Diagnostics.Debug.WriteLine(newRating.QuestionId);
 
-        //    System.Diagnostics.Debug.WriteLine(rating);
+        //    //var questions = await _context.Questions.FindAsync(id);
+        //    var questions = await this.GetQuestions(id);
+        //    System.Diagnostics.Debug.WriteLine(questions.Value.QuestionId);
+        //    questions.Value.Ratings.Add(newRating);
+        //    var wow = questions.Value;
+
+        //    System.Diagnostics.Debug.WriteLine("2223323144214142412");
+        //    //await ratingsController.PostRatings(newRating);
+
+        //    //_context.Entry(questions).State = EntityState.Modified;
+        //    //return questions;
+        //    //});
+
+        //    try
+        //    {
+        //        //await _context.SaveChangesAsync();
+        //        await this.PutQuestions(id, questions.Value);
+        //        System.Diagnostics.Debug.WriteLine("yeedgdagdagdagfdagdaga");
+        //    }
+        //    catch (DbUpdateConcurrencyException)
+        //    {
+        //        if (!QuestionsExists(id))
+        //        {
+        //            return NotFound();
+        //        }
+        //        else
+        //        {
+        //            throw;
+        //        }
+        //    }
 
         //    return NoContent();
         //}

@@ -97,6 +97,23 @@ namespace QuestionCollection.Controllers
             return ratings;
         }
 
+
+        [HttpGet("question/{id}")]
+        public async Task<ActionResult<Ratings>> GetRatingsByQuestion(int id)
+        {
+            var ratings = await _context.Ratings.FirstOrDefaultAsync(rate => rate.QuestionId == id);
+
+            if (ratings == null)
+            {
+                return NotFound();
+            }
+
+            return ratings;
+        }
+
+
+
+
         private bool RatingsExists(int id)
         {
             return _context.Ratings.Any(e => e.RatingId == id);

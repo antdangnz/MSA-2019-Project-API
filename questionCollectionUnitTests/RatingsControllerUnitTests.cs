@@ -7,10 +7,13 @@ using Microsoft.Extensions.Configuration;
 using System.Threading.Tasks;
 using QuestionCollection.Controllers;
 using QuestionCollection.Model;
+using System.Diagnostics;
+using System;
 
 namespace QuestionCollectionUnitTests
 {
-    class RatingsControllerUnitTests
+    [TestClass]
+    public class RatingsControllerUnitTests
     {
         public static readonly DbContextOptions<questionCollectionContext> options
             = new DbContextOptionsBuilder<questionCollectionContext>()
@@ -19,7 +22,20 @@ namespace QuestionCollectionUnitTests
 
         public static readonly IList<Ratings> ratings = new List<Ratings>
         {
-
+            new Ratings()
+            {
+                RatingId = 1,
+                QuestionId = 2,
+                Rating = 69,
+                RatingDescription = "This brings great joy"
+            },
+            new Ratings()
+            {
+                RatingId = 2,
+                QuestionId = 3,
+                Rating = 4,
+                RatingDescription = "This does not bring joy"
+            }
         };
 
         [TestInitialize]
@@ -46,36 +62,54 @@ namespace QuestionCollectionUnitTests
         }
 
         [TestMethod]
-        public async Task TestGetSuccessfully()
+        public async Task TestGetRatingsByQuestionSuccessfully()
         {
             using (var context = new questionCollectionContext(options))
             {
                 RatingsController ratingsController = new RatingsController(context);
-                ActionResult<IEnumerable<Ratings>> result = await ratingsController.GetRatings();
+                ActionResult<Ratings> result = await ratingsController.GetRatingsByQuestion(2);
 
                 Assert.IsNotNull(result);
-                // i should really check to make sure the exact transcriptions are in there, but that requires an equality comparer,
-                // which requires a whole nested class, thanks to C#'s lack of anonymous classes that implement interfaces
+                Assert.IsNotNull(result.Value);
+
+                // Same test
+                Assert.IsTrue(result.Value.RatingId == 1);
+                Assert.AreEqual(1, result.Value.RatingId);
+
+                Assert.IsTrue(result.Value.RatingDescription == "This brings great joy");
+                Assert.IsTrue(result.Value.Rating == 69);
+                Assert.IsFalse(result.Value.Rating == 4);
+                Assert.IsFalse(result.Value.RatingId == 123);
+
+                result = await ratingsController.GetRatingsByQuestion(3);
+
+                Assert.IsNotNull(result);
+                Assert.IsNotNull(result.Value);
+                Assert.IsTrue(result.Value.RatingId == 2);
+                Assert.IsTrue(result.Value.RatingDescription == "This does not bring joy");
+                Assert.IsTrue(result.Value.Rating == 4);
+                Assert.IsFalse(result.Value.Rating == 69);
+                Assert.IsFalse(result.Value.RatingId == 456);
             }
         }
 
-        // unfortunately, it can be hard to avoid test method names that are also descriptive
-        //[TestMethod]
-        //public async Task TestPutTranscriptionNoContentStatusCode()
-        //{
-        //    using (var context = new questionCollectionContext(options))
-        //    {
-        //        string newPhrase = "this is now a different phrase";
-        //        Ratings ratings1 = context.Questions.Where(x => x.Phrase == ratings[0].Phrase).Single();
-        //        ratings1.Phrase = newPhrase;
+        [TestMethod]
+        public async Task TestGetRatingsByQuestionFail()
+        {
+            using (var context = new questionCollectionContext(options))
+            {
+                RatingsController ratingsController = new RatingsController(context);
+                ActionResult<Ratings> result = await ratingsController.GetRatingsByQuestion(1);
 
-        //        RatingsController ratingsController = new RatingsController(context);
-        //        IActionResult result = await ratingsController.PutRatings(ratings1.RatingId, ratings1) as IActionResult;
+                //Trace.Listeners.Add(new TextWriterTraceListener(Console.Out)); Trace.WriteLine("Hello World");
+                //Trace.Listeners.Add(new TextWriterTraceListener(Console.Out)); Trace.WriteLine(result.Value);
+                Assert.IsNull(result.Value);
 
-        //        Assert.IsNotNull(result);
-        //        Assert.IsInstanceOfType(result, typeof(NoContentResult));
-        //    }
-        //}
+                result = await ratingsController.GetRatingsByQuestion(66);
+
+                Assert.IsNull(result.Value);
+            }
+        }
 
     }
 }

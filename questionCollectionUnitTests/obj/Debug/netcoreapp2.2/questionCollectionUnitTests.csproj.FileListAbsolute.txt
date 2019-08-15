@@ -12,3 +12,6 @@ C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\QuestionCollectionUnitTests
 C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\QuestionCollectionUnitTests\obj\Debug\netcoreapp2.2\QuestionCollectionUnitTests.AssemblyInfoInputs.cache
 C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\QuestionCollectionUnitTests\obj\Debug\netcoreapp2.2\QuestionCollectionUnitTests.AssemblyInfo.cs
 C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\QuestionCollectionUnitTests\obj\Debug\netcoreapp2.2\QuestionCollectionUnitTests.csproj.CopyComplete
+C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\QuestionCollectionUnitTests\bin\Debug\netcoreapp2.2\QuestionCollectionUnitTests.pdb
+C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\QuestionCollectionUnitTests\obj\Debug\netcoreapp2.2\QuestionCollectionUnitTests.dll
+C:\Users\ADang\Desktop\MSA 2019\MSA-2019-Project-API\QuestionCollectionUnitTests\obj\Debug\netcoreapp2.2\QuestionCollectionUnitTests.pdb
