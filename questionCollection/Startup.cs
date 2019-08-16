@@ -59,7 +59,7 @@ namespace QuestionCollection
             app.UseCors(builder =>
             {
                 //builder.WithOrigins("http://localhost:3000") // ################################################################################################
-                builder.WithOrigins("https://questioncollection.azurewebsites.net")
+                builder.WithOrigins("http://questioncollection.azurewebsites.net")
                     .AllowAnyHeader()
                     .AllowAnyMethod()
                     .AllowCredentials();
