@@ -25,6 +25,8 @@ namespace QuestionCollection
 
         public IConfiguration Configuration { get; }
 
+        //readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
@@ -50,6 +52,16 @@ namespace QuestionCollection
 
             //Registering Azure SignalR service
             services.AddSignalR();
+
+
+            //services.AddCors(options =>
+            //{
+            //    options.AddPolicy(MyAllowSpecificOrigins,
+            //        builder =>
+            //        {
+            //            builder.WithOrigins("");
+            //        });
+            //});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -58,12 +70,14 @@ namespace QuestionCollection
             // Make sure the CORS middleware is ahead of SignalR.
             app.UseCors(builder =>
             {
-                //builder.WithOrigins("http://localhost:3000") // ################################################################################################
-                builder.WithOrigins("http://questioncollection.azurewebsites.net")
+                builder.WithOrigins("http://localhost:3000") // ################################################################################################
+                //builder.WithOrigins("http://questioncollection.azurewebsites.net") // Needs to be the website frontend
                     .AllowAnyHeader()
                     .AllowAnyMethod()
                     .AllowCredentials();
             });
+
+            //app.UseCors(MyAllowSpecificOrigins);
 
             // SignalR
             app.UseFileServer();
