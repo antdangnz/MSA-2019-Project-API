@@ -68,6 +68,7 @@ namespace questionCollectionUnitTests
         {
             using (var context = new questionCollectionContext(options))
             {
+                context.Database.EnsureCreated(); // Added this in to check if database was created properly
                 // populate the db
                 context.Questions.Add(questions[0]);
                 context.Questions.Add(questions[1]);
@@ -87,6 +88,9 @@ namespace questionCollectionUnitTests
                 context.Questions.RemoveRange(context.Questions);
                 context.Ratings.RemoveRange(context.Ratings);
                 context.SaveChanges();
+
+                context.Database.EnsureDeleted(); // Added to check if database will be cleared. This might fix my previous issue
+                context.Dispose();
             };
         }
 
@@ -99,10 +103,22 @@ namespace questionCollectionUnitTests
                 ActionResult<IEnumerable<Questions>> result = await questionsController.GetQuestionsByAuthor("Rekkles");
 
                 Assert.IsNotNull(result.Value);
+                Assert.AreEqual(1, result.Value.ElementAt(0).QuestionId);
+                Assert.AreEqual("Big Boy", result.Value.ElementAt(0).QuestionType);
+                Assert.AreEqual("If fathers day is the answer", result.Value.ElementAt(0).QuestionText);
+
+                result = await questionsController.GetQuestionsByAuthor("Woox");
+
+                Assert.IsNotNull(result.Value);
+                Assert.AreEqual(2, result.Value.ElementAt(0).QuestionId);
+                Assert.AreEqual("Easy as", result.Value.ElementAt(0).QuestionType);
+                Assert.AreEqual("Whats the meaning of life", result.Value.ElementAt(0).QuestionText);
 
             }
         }
 
+
+        // Not sure if these will be able to be done. InMemory documentation suggests that I can't emulate a relational database
         [TestMethod]
         public async Task TestGetQuestionInstitutionSuccessful()
         {
@@ -112,7 +128,16 @@ namespace questionCollectionUnitTests
                 ActionResult<IEnumerable<Questions>> result = await questionsController.GetQuestionsInstitution("UoA");
 
                 Assert.IsNotNull(result);
+                Assert.AreEqual(1, result.Value.ElementAt(0).QuestionId);
+                Assert.AreEqual("Big Boy", result.Value.ElementAt(0).QuestionType);
+                Assert.AreEqual("If fathers day is the answer", result.Value.ElementAt(0).QuestionText);
 
+                result = await questionsController.GetQuestionsInstitution("AUT");
+
+                Assert.IsNotNull(result.Value);
+                Assert.AreEqual(2, result.Value.ElementAt(0).QuestionId);
+                Assert.AreEqual("Easy as", result.Value.ElementAt(0).QuestionType);
+                Assert.AreEqual("Whats the meaning of life", result.Value.ElementAt(0).QuestionText);
             }
         }
 
@@ -122,11 +147,21 @@ namespace questionCollectionUnitTests
             using (var context = new questionCollectionContext(options))
             {
                 QuestionsController questionsController = new QuestionsController(context);
-                ActionResult<IEnumerable<Questions>> result = await questionsController.GetQuestionsByType("Big Boy");
+                ActionResult<IEnumerable<Questions>> 
+                result = await questionsController.GetQuestionsByType("Big Boy");
 
                 Assert.IsNotNull(result);
-                Assert.AreEqual("COMPSYS", result.Value.ElementAt(0).ClassName);
+                Assert.AreEqual(1, result.Value.ElementAt(0).QuestionId);
+                Assert.AreEqual("UoA", result.Value.ElementAt(0).Institution);
+                Assert.AreEqual("If fathers day is the answer", result.Value.ElementAt(0).QuestionText);
 
+
+                result = await questionsController.GetQuestionsByType("Easy as");
+
+                Assert.IsNotNull(result.Value);
+                Assert.AreEqual(2, result.Value.ElementAt(0).QuestionId);
+                Assert.AreEqual("AUT", result.Value.ElementAt(0).Institution);
+                Assert.AreEqual("Whats the meaning of life", result.Value.ElementAt(0).QuestionText);
 
             }
         }
@@ -137,9 +172,21 @@ namespace questionCollectionUnitTests
             using (var context = new questionCollectionContext(options))
             {
                 QuestionsController questionsController = new QuestionsController(context);
-                ActionResult<IEnumerable<Questions>> result = await questionsController.GetQuestionsByClass("COMPSYS");
+                ActionResult<IEnumerable<Questions>> result = await questionsController.GetQuestionsByClass("OSRS");
+
+                Assert.IsNotNull(result.Value);
+                Assert.AreEqual(2, result.Value.ElementAt(0).QuestionId);
+                Assert.AreEqual("Easy as", result.Value.ElementAt(0).QuestionType);
+                Assert.AreEqual("AUT", result.Value.ElementAt(0).Institution);
+                Assert.AreEqual("Whats the meaning of life", result.Value.ElementAt(0).QuestionText);
+
+                result = await questionsController.GetQuestionsByClass("COMPSYS");
 
                 Assert.IsNotNull(result);
+                Assert.AreEqual(1, result.Value.ElementAt(0).QuestionId);
+                Assert.AreEqual("Big Boy", result.Value.ElementAt(0).QuestionType);
+                Assert.AreEqual("UoA", result.Value.ElementAt(0).Institution);
+                Assert.AreEqual("If fathers day is the answer", result.Value.ElementAt(0).QuestionText);
 
             }
         }
@@ -176,11 +223,11 @@ namespace questionCollectionUnitTests
                 ActionResult<int> result = await questionsController.GetRatingValue(1);
 
                 Assert.IsNotNull(result.Value);
-
+                Assert.AreEqual(4, result.Value);
             }
         }
 
-        // This test was somehow interfering with the other tests.
+        // Can't test with InMemory. InMemory doesn't have the capabilities to emulate a relational database
         //[TestMethod]
         //public async Task TestPutChangeQuestionRatingsSuccessful()
         //{
@@ -220,7 +267,6 @@ namespace questionCollectionUnitTests
 
 
 
-        // unfortunately, it can be hard to avoid test method names that are also descriptive
         //[TestMethod]
         //public async Task TestPutTranscriptionNoContentStatusCode()
         //{
