@@ -70,7 +70,7 @@ namespace QuestionCollection
             // Make sure the CORS middleware is ahead of SignalR.
             app.UseCors(builder =>
             {
-                builder.WithOrigins("https://questioncollectapp.azurewebsites.net") // ################################################################################################
+                builder.WithOrigins("https://questcollect.azurewebsites.net") // ################################################################################################
                 //builder.WithOrigins("http://questionCollApp.azurewebsites.net") // Needs to be the website frontend
                     .AllowAnyHeader()
                     .AllowAnyMethod()
