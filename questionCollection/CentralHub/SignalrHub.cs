@@ -12,5 +12,9 @@ namespace QuestionCollection.CentralHub
         {
             await Clients.All.SendAsync("Connected");
         }
+        public async Task AddQuestion()
+        {
+            await Clients.All.SendAsync("UpdateQuestionList");
+        }
     }
 }

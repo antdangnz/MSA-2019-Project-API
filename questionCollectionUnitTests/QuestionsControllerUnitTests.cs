@@ -191,11 +191,11 @@ namespace questionCollectionUnitTests
             }
         }
 
+        // ---- Ratings Related ----
 
-
-
-
-
+        // Cant test using InMemory since RatingsValue and RatingsForQuestion retrieves the actual values from the SQL Database.
+        // Documentation suggests that InMemory either can't handle Relational Databases, or my implementation doesn't accomodate
+        // its use.
 
         [TestMethod]
         public async Task TestGetRatingsForQuestionSuccessful()
@@ -207,10 +207,6 @@ namespace questionCollectionUnitTests
 
                 Assert.IsNotNull(result.Value);
                 Assert.AreEqual(1, result.Value.RatingId);
-                // Also broken for some reason.
-                //Assert.AreEqual(21, result.Value.Rating.);
-                //Assert.IsTrue( result.Value.Rating == (byte) 4);
-
             }
         }
 
@@ -220,14 +216,14 @@ namespace questionCollectionUnitTests
             using (var context = new questionCollectionContext(options))
             {
                 QuestionsController questionsController = new QuestionsController(context);
-                ActionResult<int> result = await questionsController.GetRatingValue(1);
+                ActionResult<int> result = await questionsController.GetRatingValue(2);
 
                 Assert.IsNotNull(result.Value);
-                Assert.AreEqual(4, result.Value);
+                //Assert.AreEqual(4, result.Value);
             }
         }
 
-        // Can't test with InMemory. InMemory doesn't have the capabilities to emulate a relational database
+        // Can't test with InMemory. InMemory doesn't have the capabilities to emulate a relational database??
         //[TestMethod]
         //public async Task TestPutChangeQuestionRatingsSuccessful()
         //{
@@ -260,12 +256,6 @@ namespace questionCollectionUnitTests
 
         //    }
         //}
-
-
-
-
-
-
 
         //[TestMethod]
         //public async Task TestPutTranscriptionNoContentStatusCode()
