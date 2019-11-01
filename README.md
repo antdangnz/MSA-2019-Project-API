@@ -1,6 +1,3 @@
-# MSA-2019-Project-API
-Repo for 2019 MSA Phase 1. Attempting the API Project
-
 # Project Idea
 For this Project, I need to come up with a CRUD API just like last year.
 
